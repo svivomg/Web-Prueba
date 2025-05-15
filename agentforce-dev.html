@@ -1,0 +1,27 @@
+<header></header>
+<body>
+  <script type='text/javascript'>
+    function initEmbeddedMessaging() {
+      try {
+        embeddedservice_bootstrap.settings.language = 'es'; // For example, enter 'en' or 'en-US'
+  
+        window.addEventListener("onEmbeddedMessagingReady", () => { 
+          embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({'userId' : '005JW00000O8ihFYAR'}); 
+        }); 
+
+        embeddedservice_bootstrap.init(
+          '00DJW00000B75ZR',
+          'MIAW_Routing_Bot',
+          'https://vivenio--devagent.sandbox.my.site.com/ESWMIAWRoutingBot1743424757848',
+          {
+            scrt2URL: 'https://vivenio--devagent.sandbox.my.salesforce-scrt.com'
+          }
+        );
+      } catch (err) {
+        console.error('Error loading Embedded Messaging: ', err);
+      }
+    };
+  </script>
+  <script type='text/javascript' src='https://vivenio--devagent.sandbox.my.site.com/ESWMIAWRoutingBot1743424757848/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+  
+</body>
